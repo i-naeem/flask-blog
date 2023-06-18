@@ -1,24 +1,24 @@
 from flask import Flask
+from flask import url_for
 
 app = Flask(__name__)
 
-users = [
-    {"id": 1, "name": "Alex Hales"},
-    {"id": 2, "name": "Ben Cutting"},
-    {"id": 3, "name": "Steve Smith"},
-]
 
-
+# Home Route
 @app.route('/')
-def index():
+def home():
     return "<h1> Hello World </h1>"
 
 
-@app.route('/users/<int:user_id>')
-def user(user_id):
-    user = [u for u in users if u.get('id') == user_id]
-    try:
-        name = user[0].get("name")
-        return f"<h1>{name}</h1>"
-    except:
-        return f"<h1>User Not Found</h1>"
+@app.route('/about')
+def about():
+    return "<h1> About </h1>"
+
+
+@app.route('/contact')
+def contact():
+    return "<h1> Contact </h1>"
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
