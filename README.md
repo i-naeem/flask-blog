@@ -1,3 +1,3 @@
-# FLASK BLOG
+# Learning Flask
 
-> A simple blog build with flask. 
+> Learning python flask framework
