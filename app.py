@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import url_for
+from flask import render_template
 
 app = Flask(__name__)
 
@@ -7,10 +7,10 @@ app = Flask(__name__)
 # Home Route
 @app.route('/')
 def home():
-    return "<h1> Hello World </h1>"
+    return render_template('index.html', name="Mr. Robot")
 
 
-@app.route('/about')
+@app.route('/user')
 def about():
     return "<h1> About </h1>"
 
