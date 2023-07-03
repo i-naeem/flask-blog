@@ -47,7 +47,26 @@
 {% if password is defined %}
 
 <section>
-  <input type="text" value="{{ password }}" readonly />
+  <small id="indicator" style="padding-bottom: 15px;">
+    Click to copy or press
+  </small>
+  <input type="text" value="{{ password }}" readonly id='generated-password-input' style="margin-top: 10px" />
+  <script>
+    const gpInput = document.getElementById('generated-password-input')
+    const indicator = document.getElementById('indicator')
+
+    gpInput.onclick = event => {
+
+      event.target.select();
+      navigator.clipboard.writeText(gpInput.value)
+
+      indicator.innerText = 'Copied'
+
+      setInterval(() => {
+        indicator.innerHTML = "Click on password to copy"
+      }, 1500)
+    }
+  </script>
 </section>
 {% endif %}
 

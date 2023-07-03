@@ -4,7 +4,7 @@
 
 ## Future Enhancements
 
-- [] Add Copy Options
+- [x] Add Copy Options
 - [x] add characters case options
 - [] add symbols switch
 - [] update about section
