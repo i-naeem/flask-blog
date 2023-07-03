@@ -10,6 +10,31 @@
         min="6" max="64" required />
     </section>
     <section>
+      <fieldset class="case-selector">
+        <div>
+          <legend>Select the case of characters:</legend>
+        </div>
+
+        <div>
+          <input {% if case==0 %} checked {% endif %} type="radio" id="both" name="ch-case" value="0">
+          <label for="both">Both</label>
+        </div>
+
+        <div>
+          <input {% if case==1 %} checked {% endif %} type="radio" id="uppercase" name="ch-case" value="1">
+          <label for="uppercase">Uppercase</label>
+        </div>
+
+        <div>
+          <input {% if case==-1 %} checked {% endif %} type="radio" id="lowercase" name="ch-case" value="-1">
+          <label for="lowercase">Lowercase</label>
+        </div>
+
+      </fieldset>
+
+    </section>
+
+    <section>
       <button type="submit">Generate</button>
     </section>
   </form>

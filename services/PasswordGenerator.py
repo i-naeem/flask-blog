@@ -6,9 +6,16 @@ MAX_CHARACTERS = 64
 
 
 class PasswordGenerator:
-    def __init__(self, password_length: int):
+    def __init__(self, password_length: int,
+                 character_case=int,
+                 ):
 
-        self.characters = string.ascii_letters
+        if character_case == -1:
+            self.characters = string.ascii_lowercase
+        elif character_case == 1:
+            self.characters = string.ascii_uppercase
+        else:
+            self.characters = string.ascii_letters
 
         if password_length <= MIN_CHARACTERS:
             password_length = MIN_CHARACTERS

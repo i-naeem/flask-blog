@@ -10,3 +10,12 @@
 .brand:focus {
   --background-color: transparent;
 }
+
+.case-selector {
+  display: flex;
+}
+
+.case-selector div:first-child {
+  align-items: center;
+  flex-grow: 1;
+}
