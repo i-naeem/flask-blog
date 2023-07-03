@@ -44,6 +44,16 @@
               Contact
             </a>
           </li>
+          <li>
+            <details role="list">
+              <summary aria-haspopup="listbox" role="button">Theme</summary>
+              <ul role="listbox">
+                <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li><a href="#" data-theme-switcher="light">Light</a></li>
+                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+              </ul>
+            </details>
+          </li>
         </ul>
       </nav>
     </header>
@@ -55,6 +65,8 @@
       </div>
     </main>
   </div>
+  <script src="{{ url_for('static', filename='js/themeSwitcher.js')}}"></script>
+
 </body>
 
 </html>
