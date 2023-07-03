@@ -6,10 +6,23 @@ from flask import Flask
 app = Flask(__name__)
 
 
-# Home Route
-@app.route('/')
-def home():
+@app.get('/')
+def app_get():
     return render_template('index.jinja', title="")
+
+
+@app.post('/')
+def app_post():
+    length = 6
+    try:
+        length = int(request.form.get('password-length'))
+    except Exception as e:
+        print(e)
+
+    generator = PasswordGenerator(password_length=length)
+    password = generator.generate()
+
+    return render_template('index.jinja', title="", password=password)
 
 
 # About
@@ -22,20 +35,6 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.jinja', title="Contact")
-
-
-@app.route('/generator', methods=["POST"])
-def generator():
-    length = 6
-    try:
-        length = int(request.form.get('password-length'))
-    except Exception as e:
-        print(e)
-
-    generator = PasswordGenerator(password_length=length)
-    password = generator.generate()
-
-    return dict(password=password)
 
 
 if __name__ == '__main__':

@@ -2,14 +2,23 @@
 
 {% block content %}
 
-<form action="/generator" method="POST">
-  <section>
-    <label for="password-length">password length</label>
-    <input type="number" name="password-length" id="password-length">
-  </section>
-  <section>
-    <button type="submit">Generate</button>
-  </section>
-</form>
+<section>
+  <form action="/" method="POST">
+    <section>
+      <label for="password-length">password length</label>
+      <input type="number" name="password-length" id="password-length">
+    </section>
+    <section>
+      <button type="submit">Generate</button>
+    </section>
+  </form>
+</section>
+{% if password is defined %}
+
+<section>
+  <input type="text" value="{{ password }}" readonly />
+</section>
+{% endif %}
+
 
 {% endblock %}
