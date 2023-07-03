@@ -1,0 +1,12 @@
+.ran {
+  font-size: 2rem;
+}
+.pass {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.brand:focus {
+  --background-color: transparent;
+}

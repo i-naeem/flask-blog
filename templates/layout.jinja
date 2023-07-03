@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}" />
   <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favico.png') }}" type="image/png" />
 
@@ -19,7 +20,13 @@
     <header>
       <nav>
         <ul>
-          <li><a href="/"><strong>RANPass</strong></a></li>
+          <li>
+            <a href="/" class="brand">
+              <strong>
+                <span class="ran">RAN</span><span class="pass">Pass</span>
+              </strong>
+            </a>
+          </li>
         </ul>
         <ul>
           <li>
