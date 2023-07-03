@@ -14,26 +14,29 @@
         <div>
           <legend>Select the case of characters:</legend>
         </div>
+        <div class="radio-group">
+          <div>
+            <input {% if case==0 %} checked {% endif %} type="radio" id="both" name="ch-case" value="0">
+            <label for="both">Both</label>
+          </div>
 
-        <div>
-          <input {% if case==0 %} checked {% endif %} type="radio" id="both" name="ch-case" value="0">
-          <label for="both">Both</label>
+          <div>
+            <input {% if case==1 %} checked {% endif %} type="radio" id="uppercase" name="ch-case" value="1">
+            <label for="uppercase">Uppercase</label>
+          </div>
+
+          <div>
+            <input {% if case==-1 %} checked {% endif %} type="radio" id="lowercase" name="ch-case" value="-1">
+            <label for="lowercase">Lowercase</label>
+          </div>
         </div>
-
-        <div>
-          <input {% if case==1 %} checked {% endif %} type="radio" id="uppercase" name="ch-case" value="1">
-          <label for="uppercase">Uppercase</label>
-        </div>
-
-        <div>
-          <input {% if case==-1 %} checked {% endif %} type="radio" id="lowercase" name="ch-case" value="-1">
-          <label for="lowercase">Lowercase</label>
-        </div>
-
       </fieldset>
 
     </section>
-
+    <section class="form-control">
+      <label for="number">Inlcude numbers in the password</label>
+      <input type="checkbox" id="number" name="number" role="switch" {% if include_numbers %} checked {% endif %} />
+    </section>
     <section>
       <button type="submit">Generate</button>
     </section>

@@ -19,15 +19,18 @@ def app_get():
 def app_post():
     length = 14
     character_case = 0
+    include_numbers = False
     try:
         length = int(request.form.get('password-length'))
         character_case = int(request.form.get('ch-case'))
+        include_numbers = request.form.get('number') == 'on'
     except Exception as e:
         print(e)
 
     generator = PasswordGenerator(
         password_length=length,
-        character_case=character_case
+        character_case=character_case,
+        include_numbers=include_numbers,
     )
 
     password = generator.generate()
@@ -37,6 +40,7 @@ def app_post():
         title="",
         password=password,
         previous_value=length,
+        include_numbers=include_numbers,
         case=character_case if character_case else 0,
     )
 

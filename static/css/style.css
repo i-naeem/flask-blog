@@ -13,9 +13,21 @@
 
 .case-selector {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .case-selector div:first-child {
-  align-items: center;
+  flex-grow: 1;
+}
+
+.radio-group {
+  display: flex;
+}
+
+.form-control {
+  display: flex;
+}
+
+.form-control label {
   flex-grow: 1;
 }

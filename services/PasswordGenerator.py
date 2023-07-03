@@ -8,6 +8,7 @@ MAX_CHARACTERS = 64
 class PasswordGenerator:
     def __init__(self, password_length: int,
                  character_case=int,
+                 include_numbers=bool
                  ):
 
         if character_case == -1:
@@ -23,6 +24,9 @@ class PasswordGenerator:
             password_length = MAX_CHARACTERS
         else:
             password_length = password_length
+
+        if include_numbers:
+            self.characters = self.characters + string.digits
 
         self.length = password_length
 
