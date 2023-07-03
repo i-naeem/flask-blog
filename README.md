@@ -5,7 +5,7 @@
 ## Future Enhancements
 
 - [] Add Copy Options
-- [] add characters case options
+- [x] add characters case options
 - [] add symbols switch
 - [] update about section
 - [] update contact section
