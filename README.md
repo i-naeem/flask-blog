@@ -6,10 +6,10 @@
 
 - [x] Add Copy Options
 - [x] add characters case options
-- [] add symbols switch
-- [] update about section
-- [] update contact section
+- [ ] add symbols switch
+- [ ] update about section
+- [ ] update contact section
 - [x] add number switch
-- [] add number of password to generate
-- [] add copy as json
-- [] add copy as csv
+- [ ] add number of password to generate
+- [ ] add copy as json
+- [ ] add copy as csv
