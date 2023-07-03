@@ -1,3 +1,3 @@
-# Learning Flask
+# Random Password Generator App in Flask
 
-> Learning python flask framework
+> We will build a simple random password generator app.
