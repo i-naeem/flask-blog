@@ -12,6 +12,18 @@ def home():
     return render_template('index.jinja')
 
 
+# About
+@app.route('/about')
+def about():
+    return render_template('about.jinja')
+
+
+# Contact
+@app.route('/contact')
+def contact():
+    return render_template('contact.jinja')
+
+
 @app.route('/generator', methods=["POST"])
 def generator():
     length = 6
