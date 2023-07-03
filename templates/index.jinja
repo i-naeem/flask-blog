@@ -6,13 +6,15 @@
   <form action="/" method="POST">
     <section>
       <label for="password-length">password length</label>
-      <input type="number" name="password-length" id="password-length">
+      <input type="number" value="{{ previous_value | default(14) }}" name="password-length" id="password-length"
+        min="6" max="64" required />
     </section>
     <section>
       <button type="submit">Generate</button>
     </section>
   </form>
 </section>
+
 {% if password is defined %}
 
 <section>

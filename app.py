@@ -13,7 +13,7 @@ def app_get():
 
 @app.post('/')
 def app_post():
-    length = 6
+    length = 14
     try:
         length = int(request.form.get('password-length'))
     except Exception as e:
@@ -22,7 +22,13 @@ def app_post():
     generator = PasswordGenerator(password_length=length)
     password = generator.generate()
 
-    return render_template('index.jinja', title="", password=password)
+    return render_template(
+        'index.jinja',
+
+        title="",
+        password=password,
+        previous_value=length,
+    )
 
 
 # About
