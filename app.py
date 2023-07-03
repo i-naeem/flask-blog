@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Home Route
 @app.route('/')
 def home():
-    return render_template('index.jinja')
+    return render_template('index.jinja', current_route="/about")
 
 
 # About
